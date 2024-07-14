@@ -819,7 +819,7 @@ func build_tileset_for_scene(tilesets, source_path, options):
 						tile_meta[gid][property] = ts.tiles[rel_id][property]
 
 						# If tile has a custom property called 'name', set the tile's name
-						if property == "name":
+						if property == "name" and "properties" in ts.tiles[rel_id]:
 							result.tile_set_name(gid, ts.tiles[rel_id].properties.name)
 
 
